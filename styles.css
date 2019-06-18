@@ -51,7 +51,7 @@ label {
 body {font-family: 'Times New Roman', Times, sans-serif;}
 * {box-sizing: border-box;}
 
-input[type=text], [type=password], [type=date], [type=number], [type=url], select, textarea {
+input[type=text], [type=password], [type=date], [type=number], [type=url] , [type=email] , select, textarea {
   width: 60%;
   padding: 6px;
   border: 1px solid #ccc;

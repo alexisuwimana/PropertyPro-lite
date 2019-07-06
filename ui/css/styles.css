@@ -255,7 +255,8 @@ footer{
 @media(max-width: 768px){
   header #branding, 
   header nav, 
-  header nav li{
+  header nav li,
+  #dark form{
     float:none;
     text-align:center;
     width:100%;

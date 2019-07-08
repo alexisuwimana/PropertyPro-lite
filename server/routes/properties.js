@@ -59,32 +59,23 @@ router.post('/', (req, res) => {
     const property = properties.find(p => p.id === parseInt(req.params.id));
     if (!property) return res.status(404).send('The property with the given ID was not found.');
     const { error } = validateProperty(req.body); 
-    if (error) return res.status(400).send(error.details[0].message);
-    // property.owner = req.body.owner;
-    // property.status = req.body.status;
-    // property.price = req.body.price;
-    // property.state = req.body.state;
-    // property.city = req.body.city;
-    // property.address = req.body.address;
-    // property.type = req.body.type;
-  
+    if (error) return res.status(400).send(error.details[0].message);    
     res.send(property);
   });
 
 
   router.delete('/:id', (req, res) => {
     const property = properties.find(p => p.id === parseInt(req.params.id));
-    if (!property) return res.status(404).send('Theproperty with the given ID was not found.');
+    if (!property) return res.status(404).send({status: 404, message:'The property with the given ID was not found.'});
   
     const index = properties.indexOf(property);
-    properties.splice(index, 1);
-  
+    properties.splice(index, 1);  
     res.send(property);
   });
   
   router.get('/:id', (req, res) => {
     const property = properties.find(p => p.id === parseInt(req.params.id));
-    if (!property) return res.status(404).send('The property with the given ID was not found.');
+    if (!property) return res.status(404).send({status: 404, message:'The property with the given ID was not found.'});
     res.send(property);
   });
   

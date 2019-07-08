@@ -1,6 +1,6 @@
 // During the rest the en variable is set to test
 /* global describe it beforeEach */
-process.env.NODE_ENV = 'test';
+//process.env.NODE_ENV = 'test';
 
 const Property = require('../routes/properties');
 

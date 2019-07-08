@@ -1,21 +1,19 @@
-// During the rest the en variable is set to test
-/* global describe it beforeEach */
-//process.env.NODE_ENV = 'test';
-
-const Property = require('../routes/properties');
-
-// Require the dev-dependencies
+const express = require('express');
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 
-// You need to import your app
-const app = require('../Index');
+const properties = require('../server/routes/properties');
+const app = express();
 
+app.use(express.json());
+
+app.use('/api/properties', properties);
+
+// You need to import your app
 const should = chai.should();
 // Set up the chai Http assertion library
 chai.use(chaiHttp);
-    
-    
+ 
     //Test the GET /api/properties     
     describe('GET /api/properties', () => {
         it('it should GET all properties', (done) => {
@@ -23,8 +21,7 @@ chai.use(chaiHttp);
                 .get('/api/properties')
                 .end((err, res) => {
                     res.should.have.status(200);
-                    res.body.should.be.an('array');
-                   // res.owner.should.be.a('string');
+                    res.body.should.be.an('array');                   
                     done();
                 });
         });
@@ -40,10 +37,18 @@ chai.use(chaiHttp);
                   done();
               });
       });
-  });
 
-    // More test...
-// });
+      it('it should GET single property', (done) => {
+        chai.request(app)
+            .get('/api/properties/9')
+            .end((err, res) => {
+                res.should.have.status(404);
+                res.body.message.should.equal('The property with the given ID was not found.');                  
+                done();
+            });
+    });
+
+  });
 
 describe('POST /api/properties', () => {
   
@@ -66,15 +71,28 @@ describe('POST /api/properties', () => {
   });
 });
 
-
 describe('PUT /api/properties', () => {
   it('it should PUT a property', (done) => {
       chai.request(app)
           .put('/api/properties/:id')
           .end((err, res) => {
-              res.should.have.status(404);
-              //res.body.should.be.an('array');              
+              res.should.have.status(404);           
               done();
           });
   });
 });
+
+describe('DELETE /api/properties/:id', () => {
+    it('it should DELETE single property', (done) => {
+        chai.request(app)
+            .delete('/api/properties/2')
+            .end((err, res) => {
+                res.should.have.status(200);
+                
+                                 
+                done();
+            });
+    });
+})
+
+

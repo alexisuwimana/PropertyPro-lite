@@ -2,11 +2,11 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Propert pro Lite">
     <meta name="keywords" content="Property, pro-lite">
     <meta name="author" content="Alexis UWIMANA">
-    <title>Services | PropertyPro-lite</title>
+    <title>About | PropertyPro-lite</title>
     <link rel="stylesheet" href="../css/styles.css">
 
 </head>
@@ -14,14 +14,13 @@
     <header>
         <div class="container">
             <div id="branding">
-                <h1>PropertyPro-lite</h1>
+              <a href="../index.html"><h1>PropertyPro-lite</h1></a>
             </div>
             <nav>
                 <u>
-                    <li><a href="../index.html">Home</a></li>
                     <li><a href="../html/about.html">About</a></li>
-                    <li><a href="../html/services.html">service</a></li>
-                    <li class="current"><a href="./list.html">Property</a></li>
+                    <li><a class="btn" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</a></li>
+                    
                 </u>
             </nav>
         </div>
@@ -33,6 +32,7 @@
 
 <table id="myTable">
   <tr class="header">
+      <th style="width:20%;">Property</th>
     <th style="width:20%;">owner</th>
     <th style="width:20%;">Status</th>
     <th style="width:20%;">City</th>
@@ -40,38 +40,11 @@
     <th style="width:20%;">Price</th>
     
   </tr>
-  <tr class="header">
-      <th >
-        <select id="country" name="country">
-          <option value="rwanda">All</option>
-        </select>
-      </th>
-      
-      <th >
-          <select id="country" name="country">
-            <option value="rwanda">All</option>
-          </select>
-        </th>
-      
-        <th >
-            <select id="country" name="country">
-              <option value="rwanda">All</option>
-            </select>
-          </th>
-          <th >
-              <select id="country" name="country">
-                <option value="rwanda">All</option>
-              </select>
-            </th>
-            <th>
-                <select id="country" name="country">
-                  <option value="rwanda">All</option>
-                </select>
-            </th>
-     
-    </tr>
+  
   <tr>
-    <td>Alexis</td>
+    <td><div class="column">        
+        <a href="single2.html"> <img src="../images/img_5terre_wide.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor"></a>
+      </div></td>
     <td>Availlable</td>
     <td>Kigali</td>
     <td>2 bed room</td>
@@ -81,7 +54,9 @@
     </td>
   </tr>
   <tr>
-    <td>UWIMANA</td>
+    <td><div class="column">
+        <a href="single2.html"> <img src="../images/img_5terre_wide.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor"></a>
+      </div></td>
     <td>Availlable</td>
     <td>Kicukiro</td>
     <td>3 bed room</td>
@@ -92,7 +67,9 @@
       
   </tr>
   <tr>
-    <td>John</td>
+    <td><div class="column">
+        <a href="single2.html"> <img src="../images/img_5terre_wide.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor"></a>
+      </div></td>
     <td>Sold</td>
     <td>remera</td>
     <td>3 bed room</td>
@@ -103,7 +80,9 @@
       
   </tr>
   <tr>
-        <td>John</td>
+        <td><div class="column">
+            <a href="single2.html"> <img src="../images/img_5terre_wide.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor"></a>
+          </div></td>
         <td>Availlable</td>
         <td>Kigali</td>
         <td>2 bed room</td>
@@ -114,7 +93,9 @@
           
   </tr>
   <tr>
-        <td>UWIMANA</td>
+        <td><div class="column">
+            <a href="single2.html"> <img src="../images/img_5terre_wide.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor"></a>
+          </div></td>
         <td>sold</td>
         <td>remera</td>
         <td>2 bed room</td>
@@ -125,7 +106,9 @@
           
   </tr>
   <tr>
-        <td>Alexis</td>
+        <td><div class="column">
+            <a href="single2.html"> <img src="../images/img_5terre_wide.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor"></a>
+          </div></td>
         <td>Availlable</td>
         <td>Kicukiro</td>
         <td>3 bed room</td>
@@ -136,7 +119,9 @@
           
   </tr>
   <tr>
-        <td>John</td>
+        <td><div class="column">
+            <a href="single2.html"> <img src="../images/img_5terre_wide.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor"></a>
+          </div></td>
         <td>Availlable</td>
         <td>Kigali</td>
         <td>3 bed room</td>
@@ -147,7 +132,9 @@
           
   </tr>
   <tr>
-        <td>Peter</td>
+        <td><div class="column">
+            <a href="single2.html"> <img src="../images/img_5terre_wide.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor"></a>
+          </div></td>
         <td>Availlable</td>
         <td>nyarugenge</td>
         <td>2 bed room</td>
@@ -158,10 +145,115 @@
         </td>
   </tr>
 </table>
+
+
+
+
+
+<div id="id01" class="modal">
+  
+    <form class="modal-content animate" action="../html/propertymanagement.html">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+       <!-- <img src="img_avatar2.png" alt="Avatar" class="avatar">-->
+      </div>
+  
+      <div class="container1">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+  
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+          
+        <button type="submit">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+      </div>
+  
+      <div class="container1" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">SignUp</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+    </form>
+  </div>
+  
+  
+  <div id="id02" class="modal">
     
+          <form class="modal-content animate" action="../html/propertymanagement.html">
+            <div class="imgcontainer">
+              <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+             <!-- <img src="img_avatar2.png" alt="Avatar" class="avatar">-->
+            </div>
+        
+            <div class="container1">
+              <label for="fname"><b>First Name</b></label>
+              <input type="text" placeholder="Enter First Name" name="fname" required>
+  
+              <label for="lname"><b>Last Name</b></label>
+              <input type="text" placeholder="Enter Lat Name" name="lname" required>
+  
+              <label for="email"><b>E-mail</b></label>
+              <input type="email" placeholder="Enter your E-mail" name="email" required>
+  
+              <label for="pnumber"><b>Phone Number</b></label>
+              <input type="number" placeholder="Enter your Phone Numbe" name="uname" required>
+  
+              <label for="address"><b>Address</b></label>
+              <input type="text" placeholder="Enter your Address" name="address" required>
+        
+              <label for="utype"><b>User Type</b></label>
+              <input type="text" value="Agent" name="utype" readonly>
+  
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+  
+              <label for="psw"><b>Confirm password</b></label>
+              <input type="password" placeholder="Re-Enter Password" name="psw" required>
+                
+              <button type="submit">Login</button>
+              <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+              </label>
+            </div>
+        
+            <div class="container1" style="background-color:#f1f1f1">
+              <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+              <!--<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>-->
+              <!--<span class="psw">Forgot <a href="#">password?</a></span>-->
+            </div>
+          </form>
+        </div>
+  
+  
+  
+  <script>
+  // Get the modal
+//var modal = document.getElementById('id01');
+  var modal = document.getElementById('id02');
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
+  </script>
+
+
+
+
+
+
+
+
+
+
     <script src="../js/search.js"></script>       
     
-    <footer>
+    <footer class="footer">
         <p>PropertyPro-lite, Copyright &copy; 2019</p>
     </footer>
 

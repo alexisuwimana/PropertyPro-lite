@@ -1,1 +1,6 @@
-[![Build Status](https://travis-ci.com/alexisuwimana/PropertyPro-lite.svg?branch=develop)](https://travis-ci.com/alexisuwimana/PropertyPro-lite)
+
+# PropertyPro-lite
+
+
+this my work on ADC
+

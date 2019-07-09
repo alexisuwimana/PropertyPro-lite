@@ -1,1 +1,0 @@
-[![Build Status](https://travis-ci.com/alexisuwimana/PropertyPro-lite.svg?branch=develop)](https://travis-ci.com/alexisuwimana/PropertyPro-lite)

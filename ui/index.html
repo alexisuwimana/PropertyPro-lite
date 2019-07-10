@@ -21,14 +21,14 @@
                 
                     <li><a href="./html/about.html">About</a></li>
                     <li><a href="./html/list.html">Property</a></li>
-                    <li><a class="btn" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</a></li>
-                    <!--<li><a href="./html/login.html">login</a></li>-->
+                    <li><a class="btn"  onclick="login()">Login</a></li>
                     
                 </u>
             </nav>
         </div>
         
     </header>
+
     <section class="animation" id="showcase">
         <div class="container">
             <h1>PropertyPro-lite</h1>
@@ -38,30 +38,67 @@
     </section>
 
     <section id="boxes">
+
+        <div class="flex-container">
+
         <div class="container">
           <div class="box">
-            <a><img src="./images/architecture-1867187__340.jpg" style="width:100%"></a>
+            <a><img class="singleimg"  src="./images/1.jpg"></a>
+            <p>house 1</p>
         </div>
 
+        <div class="box">
+          <a><img class="singleimg" src="./images/5.jpg"></a>
+          <p>house 2</p>
+      </div>
                 
         <div class="box">
-          <a><img src="./images/architecture-12.jpg" style="width:100%"></a>
+          <a><img class="singleimg"  src="./images/3.jpg" ></a>
+          <p>house 3</p>
       </div>
+      <div class="box">
+        <a><img class="singleimg" src="./images/4.jpg"></a>
+        <p>house 4</p>
+    </div>
+    <div class="box">
+      <a><img class="singleimg"  src="./images/5.jpg"></a>
+      <p>house 5</p>
+  </div>
+  <div class="box">
+    <a><img class="singleimg" src="./images/6.jpg"></a>
+    <p>house 6</p>
+</div>
+
+<div class="box">
+  <a><img class="singleimg"  src="./images/7.jpg" ></a>
+  <p>house 7</p>
+</div>
+
+<div class="box">
+  <a><img class="singleimg" src="./images/8.jpg"></a>
+  <p>house 8</p>
+</div>
+
+<div class="box">
+  <a><img class="singleimg"  src="./images/9.jpg" ></a>
+  <p>house 9</p>
+</div>
+</div>
+
 
             <div id="id01" class="modal">
   
                     <form class="modal-content animate" action="./html/propertymanagement.html">
                       <div class="imgcontainer">
-                        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                       <!-- <img src="img_avatar2.png" alt="Avatar" class="avatar">-->
+                         <span onclick="spanSignup()" class="close" title="Close Modal">&times;</span>
                       </div>
                   
                       <div class="container1">
                         <label for="uname"><b>Username</b></label>
-                        <input type="text" placeholder="Enter Username" name="uname" required>
+                        <input class="input" type="text" placeholder="Enter Username" name="uname" required>
                   
                         <label for="psw"><b>Password</b></label>
-                        <input type="password" placeholder="Enter Password" name="psw" required>
+                        <input class="input" type="password" placeholder="Enter Password" name="psw" required>
                           
                         <button type="submit">Login</button>
                         <label>
@@ -70,9 +107,8 @@
                       </div>
                   
                       <div class="container1" style="background-color:#f1f1f1">
-                        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                        <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">SignUp</button>
-                        <span class="psw">Forgot <a href="#">password?</a></span>
+                          <button type="button" onclick="cancelSignup()" class="cancelbtn">Cancel</button> 
+                          <button class="sizebutton" onclick="signup()">SignUp</button><span class="psw">Forgot <a href="#">password?</a></span>
                       </div>
                     </form>
                   </div>
@@ -82,34 +118,33 @@
                     
                           <form class="modal-content animate" action="./html/propertymanagement.html">
                             <div class="imgcontainer">
-                              <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
-                             <!-- <img src="img_avatar2.png" alt="Avatar" class="avatar">-->
+                                <span onclick="spanSignup()" class="close" title="Close Modal">&times;</span>
                             </div>
                         
                             <div class="container1">
                               <label for="fname"><b>First Name</b></label>
-                              <input type="text" placeholder="Enter First Name" name="fname" required>
+                              <input class="input" type="text" placeholder="Enter First Name" name="fname" required>
                   
                               <label for="lname"><b>Last Name</b></label>
-                              <input type="text" placeholder="Enter Lat Name" name="lname" required>
+                              <input class="input" type="text" placeholder="Enter Lat Name" name="lname" required>
                   
                               <label for="email"><b>E-mail</b></label>
-                              <input type="email" placeholder="Enter your E-mail" name="email" required>
+                              <input class="input" type="email" placeholder="Enter your E-mail" name="email" required>
                   
                               <label for="pnumber"><b>Phone Number</b></label>
-                              <input type="number" placeholder="Enter your Phone Numbe" name="uname" required>
+                              <input class="input" type="number" placeholder="Enter your Phone Numbe" name="uname" required>
                   
                               <label for="address"><b>Address</b></label>
-                              <input type="text" placeholder="Enter your Address" name="address" required>
+                              <input class="input" type="text" placeholder="Enter your Address" name="address" required>
                         
                               <label for="utype"><b>User Type</b></label>
-                              <input type="text" value="Agent" name="utype" readonly>
+                              <input class="input" type="text" value="Agent" name="utype" readonly>
                   
                               <label for="psw"><b>Password</b></label>
-                              <input type="password" placeholder="Enter Password" name="psw" required>
+                              <input  class="input" type="password" placeholder="Enter Password" name="psw" required>
                   
                               <label for="psw"><b>Confirm your password</b></label>
-                              <input type="password" placeholder="Re-Enter Password" name="psw" required>
+                              <input class="input" type="password" placeholder="Re-Enter Password" name="psw" required>
                                 
                               <button type="submit">Login</button>
                               <label>
@@ -118,50 +153,24 @@
                             </div>
                         
                             <div class="container1" style="background-color:#f1f1f1">
-                              <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
-                              <!--<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>-->
-                              <!--<span class="psw">Forgot <a href="#">password?</a></span>-->
+                                <button type="button" onclick="cancelLogin()" class="cancelbtn">Cancel</button>
                             </div>
                           </form>
                         </div>
-                  
-                  
-                  
-                  <script>
-                  // Get the modal
-               //var modal = document.getElementById('id01');
-                  var modal = document.getElementById('id02');
-                  
-                  // When the user clicks anywhere outside of the modal, close it
-                  window.onclick = function(event) {
-                      if (event.target == modal) {
-                          modal.style.display = "none";
-                      }
-                  }
-                  </script>
+                                    
+                        <script src="../js/javascript.js"></script>
 
-
-
-
-
-
-            <div class="box">
-                <h3>follow us on Social Media</h3>
-                    <a href="https://github.com/alexisuwimana"> <img border="0" alt="github" src="../ui/images/git.jpg" width="10%" height="10%"></a>
-                    <a href="https://twitter.com/alexisuwimana"> <img border="0" alt="" src="../ui/images/Twitter_Bird.png" width="10%" height="10%"></a>
-                    <a href="https://www.linkedin.com/in/alexis-uwimana-38381148/"> <img border="0" alt="linkedin" src="../ui/images/linkedin.png" width="10%" height="10%"></a>
-                    <a href="https://web.facebook.com/alexis.uwimana"> <img border="0" alt="facebook" src="../ui/images/fb_icon_325x325.png" width="10%" height="10%"></a>       
-            </div>
-            
-        </div>
     </section>
 
     <footer>
-        <p>PropertyPro-lite, Copyright &copy; 2019</p>
+      <div><p>PropertyPro-lite, Copyright &copy; 2019</p></Div>
+        <div><a href="https://github.com/alexisuwimana"> <img border="0" alt="github" src="../ui/images/git.jpg" width="1%" height="1%"></a>
+          <a href="https://twitter.com/alexisuwimana"> <img border="0" alt="" src="../ui/images/Twitter_Bird.png" width="1%" height="1%"></a>
+          <a href="https://www.linkedin.com/in/alexis-uwimana-38381148/"> <img border="0" alt="linkedin" src="../ui/images/linkedin.png" width="1%" height="10%"></a>
+          <a href="https://web.facebook.com/alexis.uwimana"> <img border="0" alt="facebook" src="../ui/images/fb_icon_325x325.png" width="1%" height="1%"></a>       
+      </div>        
     </footer>
 
 </body>
-
-
 
 </html>

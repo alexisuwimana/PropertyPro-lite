@@ -507,7 +507,9 @@ span.psw {
   background-color:#f1f1f1;
 }
 
-
+.thsize{
+  width: 20%;
+}
 /*single image */
 
 .singleimg{
@@ -517,6 +519,7 @@ span.psw {
 .h1Signle{
   text-align:center;
 }
+
 
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////// */

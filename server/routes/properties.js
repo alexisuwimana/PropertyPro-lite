@@ -50,19 +50,16 @@ router.post('/', (req, res) => {
     property.city = req.body.city;
     property.address = req.body.address;
     property.type = req.body.type;
-  
     res.send(property);
   });
   
-
-  router.patch('/:id', (req, res) => {
-    const property = properties.find(p => p.id === parseInt(req.params.id));
-    if (!property) return res.status(404).send('The property with the given ID was not found.');
-    const { error } = validateProperty(req.body); 
-    if (error) return res.status(400).send(error.details[0].message);    
-    res.send(property);
-  });
-
+  // router.patch('/:id', (req, res) => {
+  //   const property = properties.find(p => p.id === parseInt(req.params.id));
+  //   if (!property) return res.status(404).send('The property with the given ID was not found.');
+  //   const { error } = validateProperty(req.body); 
+  //   if (error) return res.status(400).send(error.details[0].message);    
+  //   res.send(property);
+  // });
 
   router.delete('/:id', (req, res) => {
     const property = properties.find(p => p.id === parseInt(req.params.id));

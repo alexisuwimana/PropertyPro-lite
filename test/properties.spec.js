@@ -50,6 +50,10 @@ chai.use(chaiHttp);
 
   });
 
+
+
+  
+
 describe('POST /api/properties', () => {
   
        const property =  { 

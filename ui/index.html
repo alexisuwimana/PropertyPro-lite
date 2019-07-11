@@ -86,6 +86,7 @@
 </div>
 
 
+
 <div id="id01" class="modal">
   
   <form class="modal-content animate" action="./html/propertymanagement.html">
@@ -160,9 +161,95 @@
           </div>
         </form>
       </div>
+=======
+            <div id="id01" class="modal">
+  
+                    <form class="modal-content animate" action="./html/propertymanagement.html">
+                      <div class="imgcontainer">
+                         <span onclick="spanSignup()" class="close" title="Close Modal">&times;</span>
+                      </div>
+                  
+                      <div class="container1">
+                        <label for="uname"><b>Username</b></label>
+                        <input class="input" type="text" placeholder="Enter Username" name="uname" required>
+                  
+                        <label for="psw"><b>Password</b></label>
+                        <input class="input" type="password" placeholder="Enter Password" name="psw" required>
+                          
+                        <button type="submit">Login</button>
+                        <label>
+                          <input type="checkbox" checked="checked" name="remember"> Remember me
+                        </label>
+                      </div>
+                  
+                      <div class="container1" style="background-color:#f1f1f1">
+                          <button type="button" onclick="cancelSignup()" class="cancelbtn">Cancel</button> 
+                          <button class="sizebutton" onclick="signup()">SignUp</button><span class="psw">Forgot <a href="#">password?</a></span>
+                      </div>
+                    </form>
+                  </div>
+                  
+                  
+                  <div id="id02" class="modal">
+                    
+                          <form class="modal-content animate" action="./html/propertymanagement.html">
+                            <div class="imgcontainer">
+                                <span onclick="spanSignup()" class="close" title="Close Modal">&times;</span>
+                            </div>
+                        
+                            <div class="container1">
+                              <label for="fname"><b>First Name</b></label>
+                              <input class="input" type="text" placeholder="Enter First Name" name="fname" required>
+                  
+                              <label for="lname"><b>Last Name</b></label>
+                              <input class="input" type="text" placeholder="Enter Lat Name" name="lname" required>
+                  
+                              <label for="email"><b>E-mail</b></label>
+                              <input class="input" type="email" placeholder="Enter your E-mail" name="email" required>
+                  
+                              <label for="pnumber"><b>Phone Number</b></label>
+                              <input class="input" type="number" placeholder="Enter your Phone Numbe" name="uname" required>
+                  
+                              <label for="address"><b>Address</b></label>
+                              <input class="input" type="text" placeholder="Enter your Address" name="address" required>
+                        
+                              <label for="utype"><b>User Type</b></label>
+                              <input class="input" type="text" value="Agent" name="utype" readonly>
+                  
+                              <label for="psw"><b>Password</b></label>
+                              <input  class="input" type="password" placeholder="Enter Password" name="psw" required>
+                  
+                              <label for="psw"><b>Confirm your password</b></label>
+                              <input class="input" type="password" placeholder="Re-Enter Password" name="psw" required>
+                                
+                              <button type="submit">Login</button>
+                              <label>
+                                <input type="checkbox" checked="checked" name="remember"> Remember me
+                              </label>
+                            </div>
+                        
+                            <div class="container1" style="background-color:#f1f1f1">
+                                <button type="button" onclick="cancelLogin()" class="cancelbtn">Cancel</button>
+                            </div>
+                          </form>
+                        </div>
+                                    
+                        <script src="../js/javascript.js"></script>
+
+    </section>
+
+    <footer>
+      <div><p>PropertyPro-lite, Copyright &copy; 2019</p></Div>
+        <div><a href="https://github.com/alexisuwimana"> <img border="0" alt="github" src="../ui/images/git.jpg" width="1%" height="1%"></a>
+          <a href="https://twitter.com/alexisuwimana"> <img border="0" alt="" src="../ui/images/Twitter_Bird.png" width="1%" height="1%"></a>
+          <a href="https://www.linkedin.com/in/alexis-uwimana-38381148/"> <img border="0" alt="linkedin" src="../ui/images/linkedin.png" width="1%" height="10%"></a>
+          <a href="https://web.facebook.com/alexis.uwimana"> <img border="0" alt="facebook" src="../ui/images/fb_icon_325x325.png" width="1%" height="1%"></a>       
+      </div>        
+    </footer>
 
     
       <script src="./js/javascript.js"></script>
+
 
 <footer>
 <div><p>PropertyPro-lite, Copyright &copy; 2019</p></Div>
@@ -174,5 +261,6 @@
 </footer>
 
 </body>
+
 
 </html>

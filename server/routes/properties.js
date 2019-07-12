@@ -14,7 +14,6 @@ const properties = [
     {id:8, owner: 'Yve', status: 'available', price: 4000, state: 'Rwanda', city: 'Kigali', address: 'nyamirambo', type: '3 bed room'},
 ];
 
-
 router.get('/', (req, res) => {
     res.send(properties);
   });
@@ -53,13 +52,6 @@ router.post('/', (req, res) => {
     res.send(property);
   });
   
-  // router.patch('/:id', (req, res) => {
-  //   const property = properties.find(p => p.id === parseInt(req.params.id));
-  //   if (!property) return res.status(404).send('The property with the given ID was not found.');
-  //   const { error } = validateProperty(req.body); 
-  //   if (error) return res.status(400).send(error.details[0].message);    
-  //   res.send(property);
-  // });
 
   router.delete('/:id', (req, res) => {
     const property = properties.find(p => p.id === parseInt(req.params.id));

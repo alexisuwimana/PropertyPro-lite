@@ -35,12 +35,12 @@ router.post('/', (req, res) => {
     };
     
     properties.push(property);
-    res.send(property);
+    res.status(201).send(property);
   });
   
   router.put('/:id', (req, res) => {
     const property = properties.find(p => p.id === parseInt(req.params.id));
-    if (!property) return res.status(404).send('The property with the given ID was not found.');
+    if (!property) return res.status(404).send({status: 404, message:'The property with the given ID was not found.'});
     const { error } = validateProperty(req.body); 
     if (error) return res.status(400).send(error.details[0].message);
     property.owner = req.body.owner;
@@ -73,7 +73,7 @@ router.post('/', (req, res) => {
   router.get('/:id', (req, res) => {
     const property = properties.find(p => p.id === parseInt(req.params.id));
     if (!property) return res.status(404).send({status: 404, message:'The property with the given ID was not found.'});
-    res.send(property);
+    res.status(404).send(property);
   });
   
   function validateProperty(property) {
